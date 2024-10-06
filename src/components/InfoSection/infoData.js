@@ -34,7 +34,7 @@ export const homeObjThree = {
   topLine: 'Lenovo',
   headLine: 'Driving Strategic Innovation',
   description:
-    'As a Digital Transformation Product Intern at Lenovo, I led the development of a real-time insights dashboard to track $300 million in annual investments. Mentoring two undergraduate interns, I introduced a new project lifecycle methodology to streamline data tracking and reporting. The result was a user-friendly tool that improved operational efficiency, allowing project managers to update data easily and providing executives with valuable insights for informed decision-making.',
+    'As a Digital Transformation Product Intern at Lenovo, I led the development of a real-time insights dashboard to track $300 million in annual investments. Mentoring two undergraduate interns, we introduced a new project lifecycle methodology to track projects better. The result was a user-friendly product that improved operational efficiency, allowing project managers to update data easily and providing executives with valuable insights for informed decision-making.',
   imgStart: false,
   img: '/images/svg-4.svg',
   alt: 'Sports',
