@@ -1,7 +1,7 @@
 import Icon1 from '../../assets/images/jxos.webp';
 import Icon2 from '../../assets/images/releaf.jpg';
 import Icon3 from '../../assets/images/drsheeba.webp';
-import Icon4 from '../../assets/images/ButterFlyEffectCoach.webp';
+import Icon4 from '../../assets/images/ButterflyEffectCoach.webp';
 import Icon5 from '../../assets/images/8a.png';
 
 export const serviceData = [
