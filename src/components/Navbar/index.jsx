@@ -25,6 +25,13 @@ const Navbar = ({ toggle }) => {
     }
   };
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/data/JayJhangianiNYU.pdf'; // Replace with your file's URL
+    link.download = 'JayJhangianiNYU.pdf'; // Specify the file name for download
+    link.click();
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav);
   }, []);
@@ -35,7 +42,7 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav>
+        <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo
               to="/"
@@ -48,26 +55,80 @@ const Navbar = ({ toggle }) => {
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks to="about">About</NavLinks>
+                <NavLinks
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  About
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="nyu">NYU</NavLinks>
+                <NavLinks
+                  to="nyu"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  NYU
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="lenovo">Lenovo</NavLinks>
+                <NavLinks
+                  to="lenovo"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Lenovo
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="ltimindtree">LTIMindtree</NavLinks>
+                <NavLinks
+                  to="ltimindtree"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  LTIMindtree
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="entrepreneurship">Entrepreneurship</NavLinks>
+                <NavLinks
+                  to="entrepreneurship"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Entrepreneurship
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="ai">AI</NavLinks>
+                <NavLinks
+                  to="ai"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  AI
+                </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/resume">Resume</NavBtnLink>
+              <NavBtnLink onClick={handleDownload}>Resume</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
