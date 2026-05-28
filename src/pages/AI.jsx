@@ -535,7 +535,7 @@ const AI = () => {
     <PageWrapper>
       <Title>MDRhythm Voice Agent</Title>
       <Subtitle>
-        One area where I excel as an AI PM: building agentic voice workflows from scratch,
+        One area where I excel as an AI PM: building agentic workflows from scratch,
         architecting the state machine, writing the prompts, and running a real clinic trial.
       </Subtitle>
 
