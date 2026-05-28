@@ -14,9 +14,22 @@ import {
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { animateScroll as scroll } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
+
+const NAV_ITEMS = [
+  { label: 'About', id: 'about' },
+  { label: 'MDRhythm', id: 'mdrhythm' },
+  { label: 'NYU', id: 'nyu' },
+  { label: 'Lenovo', id: 'lenovo' },
+  { label: 'LTIMindtree', id: 'ltimindtree' },
+  { label: 'Entrepreneurship', id: 'entrepreneurship' },
+  { label: 'Research', id: 'research' },
+];
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -28,8 +41,8 @@ const Navbar = ({ toggle }) => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/data/JayJhangianiNYU.pdf'; // Replace with your file's URL
-    link.download = 'JayJhangianiNYU.pdf'; // Specify the file name for download
+    link.href = '/data/JayJhangianiNYU.pdf';
+    link.download = 'JayJhangianiNYU.pdf';
     link.click();
   };
 
@@ -40,105 +53,37 @@ const Navbar = ({ toggle }) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav $scrollNav={scrollNav}>
+        <Nav $scrollNav={scrollNav} $solid={!isHome}>
           <NavbarContainer>
-            <NavLogo
-              to="/"
-              onClick={toggleHome}
-            >
+            <NavLogo to="/" onClick={toggleHome}>
               Jay Jhangiani
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
             <NavMenu>
-              <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  About
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="mdrhythm"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  MDRhythm
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="nyu"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  NYU
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="lenovo"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Lenovo
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="ltimindtree"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  LTIMindtree
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="entrepreneurship"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Entrepreneurship
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="research"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Research
-                </NavLinks>
-              </NavItem>
+              {NAV_ITEMS.map(({ label, id }) => (
+                <NavItem key={id}>
+                  {isHome ? (
+                    <NavLinks
+                      to={id}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                    >
+                      {label}
+                    </NavLinks>
+                  ) : (
+                    <NavLinkRouter to={`/#${id}`}>{label}</NavLinkRouter>
+                  )}
+                </NavItem>
+              ))}
               <NavItem>
                 <NavLinkRouter to="/ai">AI</NavLinkRouter>
               </NavItem>

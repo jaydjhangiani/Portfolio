@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   SidebarContainer,
   CloseIcon,
@@ -11,6 +12,15 @@ import {
   SidebarMenu,
 } from './SidebarElements';
 
+const NAV_ITEMS = [
+  { label: 'About', id: 'about' },
+  { label: 'NYU', id: 'nyu' },
+  { label: 'Lenovo', id: 'lenovo' },
+  { label: 'LTIMindtree', id: 'ltimindtree' },
+  { label: 'Entrepreneurship', id: 'entrepreneurship' },
+  { label: 'Research', id: 'research' },
+];
+
 const handleDownload = () => {
   const link = document.createElement('a');
   link.href = '/data/JayJhangianiNYU.pdf';
@@ -19,53 +29,28 @@ const handleDownload = () => {
 };
 
 const Sidebar = ({ isOpen, toggle }) => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   return (
     <>
-      <SidebarContainer
-        $isOpen={isOpen}
-        onClick={toggle}
-      >
+      <SidebarContainer $isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink
-              to="about"
-              onClick={toggle}
-            >
-              About
-            </SidebarLink>
-            <SidebarLink
-              to="nyu"
-              onClick={toggle}
-            >
-              NYU
-            </SidebarLink>
-            <SidebarLink
-              to="lenovo"
-              onClick={toggle}
-            >
-              Lenovo
-            </SidebarLink>
-            <SidebarLink
-              to="ltimindtree"
-              onClick={toggle}
-            >
-              LTIMindtree
-            </SidebarLink>
-            <SidebarLink
-              to="entrepreneurship"
-              onClick={toggle}
-            >
-              Entrepreneurship
-            </SidebarLink>
-            <SidebarLink
-              to="research"
-              onClick={toggle}
-            >
-              Research
-            </SidebarLink>
+            {NAV_ITEMS.map(({ label, id }) =>
+              isHome ? (
+                <SidebarLink key={id} to={id} onClick={toggle}>
+                  {label}
+                </SidebarLink>
+              ) : (
+                <SidebarLinkRouter key={id} to={`/#${id}`} onClick={toggle}>
+                  {label}
+                </SidebarLinkRouter>
+              )
+            )}
             <SidebarLinkRouter to="/ai" onClick={toggle}>
               AI
             </SidebarLinkRouter>

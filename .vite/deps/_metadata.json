@@ -1,55 +1,67 @@
 {
-  "hash": "cebb1b18",
+  "hash": "d4e7813e",
   "configHash": "26cb2aaf",
-  "lockfileHash": "f265ab7b",
-  "browserHash": "260732ac",
+  "lockfileHash": "6dae2c6e",
+  "browserHash": "fb567c57",
   "optimized": {
     "react": {
       "src": "../../../Portfolio/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "ded99e08",
+      "fileHash": "43c22792",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../../Portfolio/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "05e65d34",
+      "fileHash": "ee29c56c",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../../Portfolio/node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "6450a450",
+      "fileHash": "11587b93",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../../Portfolio/node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "8b503102",
+      "fileHash": "45d221fa",
       "needsInterop": false
     },
     "react-icons": {
       "src": "../../../Portfolio/node_modules/react-icons/index.mjs",
       "file": "react-icons.js",
-      "fileHash": "dfb5647b",
+      "fileHash": "2521b176",
       "needsInterop": false
     },
     "react-scroll": {
       "src": "../../../Portfolio/node_modules/react-scroll/modules/index.js",
       "file": "react-scroll.js",
-      "fileHash": "da6b5137",
+      "fileHash": "709cc42f",
       "needsInterop": true
     },
     "styled-components": {
       "src": "../../../Portfolio/node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "styled-components.js",
-      "fileHash": "e4ad1b08",
+      "fileHash": "363cd1b5",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../../Portfolio/node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "4b86986d",
+      "fileHash": "adac556c",
+      "needsInterop": false
+    },
+    "@xyflow/react": {
+      "src": "../../../Portfolio/node_modules/@xyflow/react/dist/esm/index.js",
+      "file": "@xyflow_react.js",
+      "fileHash": "844c8d7a",
+      "needsInterop": false
+    },
+    "react-icons/si": {
+      "src": "../../../Portfolio/node_modules/react-icons/si/index.mjs",
+      "file": "react-icons_si.js",
+      "fileHash": "3718dc32",
       "needsInterop": false
     }
   },

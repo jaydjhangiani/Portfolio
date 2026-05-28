@@ -5,7 +5,7 @@ export const homeObjOne = {
   topLine: 'About Me',
   headLine: "Hi, I'm Jay!",
   description:
-  "I'm Jay. I build things. Internal tools, AI agents, data products, full-stack platforms. Mostly I just like finding where things are broken and fixing them with technology. Master's degree from New York University Stern School of Business and Courant Institute of Mathematical Sciences. Fascinated by what happens when you give small businesses the same tools as large ones. I think the best products are simple, trustworthy, and quietly make someone's day easier. I write about all of it at Jay's Journal.",
+  "I build things. Internal tools, AI agents, data products, full-stack platforms. Mostly I just like finding where things are broken and fixing them with technology. Master's degree from New York University Stern School of Business and Courant Institute of Mathematical Sciences. Fascinated by what happens when you give small businesses the same tools as large ones. I think the best products are simple, trustworthy, and quietly make someone's day easier. I write about all of it at Jay's Journal.",
   imgStart: false,
   img: '/images/svg-1.svg',
   alt: 'analysis',
