@@ -3,6 +3,7 @@ import {
   SidebarContainer,
   CloseIcon,
   SidebarRoute,
+  SidebarLinkRouter,
   Icon,
   SidebarLink,
   SideBtnWrap,
@@ -10,11 +11,18 @@ import {
   SidebarMenu,
 } from './SidebarElements';
 
+const handleDownload = () => {
+  const link = document.createElement('a');
+  link.href = '/data/JayJhangianiNYU.pdf';
+  link.download = 'JayJhangianiNYU.pdf';
+  link.click();
+};
+
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
       <SidebarContainer
-        isOpen={isOpen}
+        $isOpen={isOpen}
         onClick={toggle}
       >
         <Icon onClick={toggle}>
@@ -53,14 +61,19 @@ const Sidebar = ({ isOpen, toggle }) => {
               Entrepreneurship
             </SidebarLink>
             <SidebarLink
-              to="ai"
+              to="research"
               onClick={toggle}
             >
-              AI
+              Research
             </SidebarLink>
+            <SidebarLinkRouter to="/ai" onClick={toggle}>
+              AI
+            </SidebarLinkRouter>
           </SidebarMenu>
           <SideBtnWrap>
-            <SidebarRoute to="/resume">Resume</SidebarRoute>
+            <SidebarRoute onClick={() => { handleDownload(); toggle(); }}>
+              Resume
+            </SidebarRoute>
           </SideBtnWrap>
         </SidebarWrapper>
       </SidebarContainer>

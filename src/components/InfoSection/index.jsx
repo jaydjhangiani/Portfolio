@@ -28,16 +28,16 @@ const InfoSection = ({
   return (
     <>
       <InfoContainer
-        lightBg={lightBg}
+        $lightBg={lightBg}
         id={id}
       >
         <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
+          <InfoRow $imgStart={imgStart}>
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headLine}</Heading>
-                <SubTitle darkText={darkText}>{description}</SubTitle>
+                <Heading $lightText={lightText}>{headLine}</Heading>
+                <SubTitle $darkText={darkText}>{description}</SubTitle>
               </TextWrapper>
             </Column1>
             <Column2>

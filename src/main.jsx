@@ -3,16 +3,10 @@ import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Resume from './pages/Resume.jsx';
 import Home from './pages/Home.jsx';
+import AI from './pages/AI.jsx';
 
 const router = createBrowserRouter([
-  // {
-  //   path: '/',
-  //   element: <App />,
-  //   // errorElement: <NotFoundPage />,
-  // },
-
   {
     path: '/',
     element: <App />,
@@ -20,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/ai',
+        element: <AI />,
       },
     ],
   },

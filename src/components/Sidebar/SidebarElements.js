@@ -8,13 +8,13 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: #1a1a2e;
   display: grid;
   align-items: center;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  opacity: ${({ $isOpen }) => ($isOpen ? '100%' : '0')};
+  top: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -38,11 +38,28 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(7, 80px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(7, 60px);
+  }
+`;
+
+export const SidebarLinkRouter = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #01bf71;
+    transition: 0.2s ease-in-out;
   }
 `;
 
@@ -68,9 +85,9 @@ export const SideBtnWrap = styled.div`
   justify-content: center;
 `;
 
-export const SidebarRoute = styled(LinkR)`
+export const SidebarRoute = styled.button`
   border-radius: 50px;
-  /* margin-top: -40px; */
+  margin-top: 24px;
   background: #01bf71;
   white-space: nowrap;
   padding: 16px 64px;

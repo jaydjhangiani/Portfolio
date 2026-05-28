@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-  background-color: #0c0c0c;
+  background-color: #1a1a2e
 `;
 
 export const FooterWrap = styled.div`
@@ -75,7 +75,7 @@ export const SocialMediaWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1100px;
-  margin: 40px auto 0 auto;
+  // margin: 40px auto 0 auto;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;

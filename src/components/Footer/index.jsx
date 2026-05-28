@@ -10,7 +10,8 @@ import {
   SocialMediaWrap,
   WebsiteRights,
 } from './FooterElements';
-import { FaGithub, FaLinkedin, FaReact } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiSubstack } from "react-icons/si";
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
             >
               Jay Jhangiani
             </SocialLogo>
-            <WebsiteRights>Powered by JXOS</WebsiteRights>
+            
             <SocialIcons>
               <SocialIconLink
                 href="https://github.com/jaydjhangiani"
@@ -39,9 +40,14 @@ const Footer = () => {
               >
                 <FaGithub />
               </SocialIconLink>
-              <SocialIconDiv aria-label="MADE WITH REACT">
-                <FaReact />
-              </SocialIconDiv>
+              <SocialIconLink
+                href="https://jaysjournal.substack.com"
+                target="_blank"
+                aria-label="Substack"
+                rel="noopener noreferrer"
+              >
+                <SiSubstack  />
+              </SocialIconLink>
               <SocialIconLink
                 href="https://linkedin.com/in/jaydjhangiani"
                 target="_blank"

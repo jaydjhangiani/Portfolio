@@ -7,6 +7,7 @@ import {
   NavBtnLink,
   NavItem,
   NavLinks,
+  NavLinkRouter,
   NavLogo,
   NavMenu,
 } from './NavbarElements';
@@ -42,7 +43,7 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav scrollNav={scrollNav}>
+        <Nav $scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo
               to="/"
@@ -64,6 +65,18 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                 >
                   About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="mdrhythm"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  MDRhythm
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -116,15 +129,18 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="ai"
+                  to="research"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  AI
+                  Research
                 </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinkRouter to="/ai">AI</NavLinkRouter>
               </NavItem>
             </NavMenu>
             <NavBtn>

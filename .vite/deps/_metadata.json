@@ -1,0 +1,67 @@
+{
+  "hash": "cebb1b18",
+  "configHash": "26cb2aaf",
+  "lockfileHash": "f265ab7b",
+  "browserHash": "260732ac",
+  "optimized": {
+    "react": {
+      "src": "../../../Portfolio/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ded99e08",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../../Portfolio/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "05e65d34",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../../Portfolio/node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "6450a450",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../../Portfolio/node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "8b503102",
+      "needsInterop": false
+    },
+    "react-icons": {
+      "src": "../../../Portfolio/node_modules/react-icons/index.mjs",
+      "file": "react-icons.js",
+      "fileHash": "dfb5647b",
+      "needsInterop": false
+    },
+    "react-scroll": {
+      "src": "../../../Portfolio/node_modules/react-scroll/modules/index.js",
+      "file": "react-scroll.js",
+      "fileHash": "da6b5137",
+      "needsInterop": true
+    },
+    "styled-components": {
+      "src": "../../../Portfolio/node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "e4ad1b08",
+      "needsInterop": false
+    },
+    "react-icons/md": {
+      "src": "../../../Portfolio/node_modules/react-icons/md/index.mjs",
+      "file": "react-icons_md.js",
+      "fileHash": "4b86986d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-NZ73LXGP": {
+      "file": "chunk-NZ73LXGP.js"
+    },
+    "chunk-U7QEQJ5M": {
+      "file": "chunk-U7QEQJ5M.js"
+    },
+    "chunk-R6L36A3C": {
+      "file": "chunk-R6L36A3C.js"
+    }
+  }
+}

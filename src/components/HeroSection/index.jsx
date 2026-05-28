@@ -25,9 +25,10 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
+          playsInline
           src={Video}
           type="video/mp4"
-          preload="true"
+          preload="auto"
         />
       </HeroBg>
       <HeroContent>

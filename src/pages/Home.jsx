@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import {
+  homeObjSix,
   homeObjFive,
   homeObjFour,
   homeObjOne,
@@ -18,8 +19,10 @@ const Home = () => {
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjFour} />
-      <Services />
       <InfoSection {...homeObjFive} />
+      <Services />
+      <InfoSection {...homeObjSix} />
+      
     </>
   );
 };
