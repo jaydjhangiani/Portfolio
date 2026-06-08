@@ -15,6 +15,7 @@ import {
 const NAV_ITEMS = [
   { label: 'About', id: 'about' },
   { label: 'NYU', id: 'nyu' },
+  { label: 'MDRhythm', id: 'mdrhythm' },
   { label: 'Lenovo', id: 'lenovo' },
   { label: 'LTIMindtree', id: 'ltimindtree' },
   { label: 'Entrepreneurship', id: 'entrepreneurship' },

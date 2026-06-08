@@ -18,8 +18,8 @@ import { useLocation } from 'react-router-dom';
 
 const NAV_ITEMS = [
   { label: 'About', id: 'about' },
-  { label: 'MDRhythm', id: 'mdrhythm' },
   { label: 'NYU', id: 'nyu' },
+  { label: 'MDRhythm', id: 'mdrhythm' },
   { label: 'Lenovo', id: 'lenovo' },
   { label: 'LTIMindtree', id: 'ltimindtree' },
   { label: 'Entrepreneurship', id: 'entrepreneurship' },
